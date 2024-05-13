@@ -9,8 +9,10 @@
 	border: solid red 3px;
 }
 
-.rowDiv {
+.rows {
 	display: flex;
+	flex-direction: column;
+	border: 1px blue solid;
 }
 
 .btn {
@@ -19,4 +21,7 @@
 	border: 2px black solid;
 	border-radius: 10px;
 	font-weight: bold;
+}
+
+.columns {
 }
