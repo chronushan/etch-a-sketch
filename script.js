@@ -20,7 +20,7 @@ btn.addEventListener("click", () => {
 	let gridRows = Number(prompt("Enter number of rows: "));
 	while (true) {
 		if (isNaN(gridRows)) {
-			gridRows = Number(prompt("Please enter a number for rows: "));
+			gridRows = Number(prompt("Please enter a valid number for rows: "));
 		} else {
 			break;
 		}
@@ -28,7 +28,7 @@ btn.addEventListener("click", () => {
 	let gridCol = Number(prompt("Enter number of columns: "));
 	while (true) {
 		if (isNaN(gridCol)) {
-			gridCol = Number(prompt("Please enter number of columns: "));
+			gridCol = Number(prompt("Please enter a valid number of columns: "));
 		} else {
 			break;
 		}
