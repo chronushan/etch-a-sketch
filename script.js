@@ -17,18 +17,26 @@ for (let i = 0; i < 16; i++) {
 const btn = document.querySelector(".btn");
 
 btn.addEventListener("click", () => {
-	let gridRows = Number(prompt("Enter number of rows: "));
+	let gridRows = Number(prompt("Enter number of rows (1~100): "));
 	while (true) {
 		if (isNaN(gridRows)) {
-			gridRows = Number(prompt("Please enter a valid number for rows: "));
+			gridRows = Number(prompt("Please only enter number(s) for rows: "));
+		} else if (gridRows > 100 || gridRows < 1) {
+			gridRows = Number(
+				prompt("Please enter a number within the range for rows (1~100): ")
+			);
 		} else {
 			break;
 		}
 	}
-	let gridCol = Number(prompt("Enter number of columns: "));
+	let gridCol = Number(prompt("Enter number of columns (1~100): "));
 	while (true) {
 		if (isNaN(gridCol)) {
-			gridCol = Number(prompt("Please enter a valid number of columns: "));
+			gridCol = Number(prompt("Please only enter number(s) for columns: "));
+		} else if (gridCol > 100 || gridCol < 1) {
+			gridCol = Number(
+				prompt("Please enter a number within the range for columns (1~100): ")
+			);
 		} else {
 			break;
 		}
