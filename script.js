@@ -9,7 +9,7 @@ function gridMaker(dimensions = 16) {
 			var indvDiv = document.createElement("div");
 			indvDiv.className = "columns";
 			document.querySelector(`.rowDiv${i}`).appendChild(indvDiv);
-			indvDiv.style.cssText = " border: 1px solid black; padding: 5px";
+			indvDiv.style.cssText = " border: 1px solid black;";
 			indvDiv.addEventListener("mouseenter", (event) => {
 				event.target.style.backgroundColor = "red";
 			});
@@ -35,4 +35,4 @@ btn.addEventListener("click", () => {
 	}
 });
 
-gridMaker(70);
+gridMaker(100);
