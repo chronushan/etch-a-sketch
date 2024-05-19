@@ -35,4 +35,4 @@ btn.addEventListener("click", () => {
 	}
 });
 
-gridMaker(50);
+gridMaker(70);
