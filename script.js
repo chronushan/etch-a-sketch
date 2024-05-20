@@ -9,7 +9,6 @@ function gridMaker(dimensions = 16) {
 			var indvDiv = document.createElement("div");
 			indvDiv.className = "columns";
 			document.querySelector(`.rowDiv${i}`).appendChild(indvDiv);
-			indvDiv.style.cssText = " border: 1px solid black;";
 			indvDiv.addEventListener("mouseenter", (event) => {
 				event.target.style.backgroundColor = "red";
 			});
@@ -18,10 +17,13 @@ function gridMaker(dimensions = 16) {
 	}
 }
 
+gridMaker();
 const btn = document.querySelector(".btn");
 
 btn.addEventListener("click", () => {
-	let gridNum = Number(prompt("Enter number for grid (1~100): "));
+	document.querySelectorAll(".columns").forEach((e) => e.remove());
+	document.querySelectorAll(".rows").forEach((e) => e.remove());
+	var gridNum = Number(prompt("Enter number for grid (1~100): "));
 	while (true) {
 		if (isNaN(gridNum)) {
 			gridNum = Number(prompt("Please only enter number(s): "));
@@ -33,6 +35,8 @@ btn.addEventListener("click", () => {
 			break;
 		}
 	}
+
+	gridMaker(gridNum);
 });
 
-gridMaker(100);
+// gridMaker();

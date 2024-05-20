@@ -26,4 +26,5 @@
 
 .columns {
 	flex: auto;
+	border: 1px solid black;
 }
